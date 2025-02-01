@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Plant Disease Prediction</title>
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='css/styles.css') }}"
+    />
+  </head>
+
+  <body>
+    <div class="container-1">
+      <div class="base-layer">
+        <h1 class="title">Plant Disease Prediction</h1>
+      </div>
+      <div class="second-layer">
+        <h3 class="subtitle">Input your Image</h3>
+        <form action="/predict" method="post" enctype="multipart/form-data">
+          <section>
+            <div>
+              <input type="file" id="image" name="image" accept="image/*" required>
+            </div>
+            <div>
+              <input type="submit" class="next" value="Predict Disease" />
+            </div>
+          </section>
+        </form>
+      </div>
+    </div>
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+  </body>
+</html>

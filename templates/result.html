@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Result</title>
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='css/styles.css') }}"
+    />
+  </head>
+
+  <body>
+    <div class="base-layer">
+      <h1 class="title">Plant Disease Prediction</h1>
+    </div>
+    <div class="second-layer">
+      <div class="results">
+        <p class="subtitle">The results are:</p>
+        <p class="subsubtitle">This leaf belongs to the <span class="results">{{ plant }}</span> plant</p>
+        <p class="subsubtitle">Prediction: <span class="results">{{ disease }}</span></p>
+        <div><a href="/">Go back to homepage</a></div>
+      </div>
+    </div>
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+  </body>
+</html>
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Prediction Result</title>
+  </head>
+  <body>
+    <h1>Prediction Result</h1>
+    <p>The predicted plant is: {{ plant }}</p>
+    <p>The predicted disease is: {{ disease }}</p>
+    
+  </body>
+</html>
